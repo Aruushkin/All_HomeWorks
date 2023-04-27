@@ -1,0 +1,28 @@
+monday = input("Введите что вы купите в Понедельник: ")
+monday_sum = float(input("Введите сумму продукта: "))
+tuesday = input("Введите что вы купите во Вторник: ")
+tuesday_sum = float(input("Введите сумму продукта: "))
+wednesday = input ("Введите что купите в среду: ")
+wednesday_sum = float(input("Введите сумму продукта: "))
+thursday = input ("Введите что купите в четверг: ")
+thursday_sum = float(input("Введите сумму продукта: "))
+friday = input ("Введите что купите в пятницу: ")
+friday_sum = float(input("Введите сумму продукта: "))
+saturday = input("Введите что вы купите в субботу: ")
+saturday_sum = float(input("Введите сумму продукта: "))
+sunday = input ("Введите что вы купите в воскресенье: ")
+sunday_sum = float(input("Введите сумму продукта: "))
+
+
+print("Список покупок")
+print(f"Понедельник: Продукт: {monday}, Сумма: {monday_sum}")
+print(f"Вторник: Продукт: {tuesday}, Сумма: {tuesday_sum}")
+print(f"Среда: Продукт: {wednesday}, Сумма: {wednesday_sum}")
+print(f"Четверг: Продук: {thursday}, Сумма: {thursday_sum}")
+print(f"Пятница: Продукт: {friday}, Сумма: {friday_sum}")
+print(f"суббота: Проодукт: {saturday}, Сумма: {saturday_sum}")
+print(f"воскресенье: продукт: {sunday}, сумма: {sunday_sum}")
+
+
+print(f"{round(monday_sum + tuesday_sum + wednesday_sum + thursday_sum + thursday_sum + friday_sum + saturday_sum + sunday_sum, 1)}")
+print(f"{round((monday_sum + tuesday_sum + wednesday_sum + thursday_sum + thursday_sum + friday_sum + saturday_sum + sunday_sum) / 7, 1)}")

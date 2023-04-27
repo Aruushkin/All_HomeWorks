@@ -1,0 +1,7 @@
+venv
+hw.db
+.idea
+.env
+ENV
+env/
+.venv
