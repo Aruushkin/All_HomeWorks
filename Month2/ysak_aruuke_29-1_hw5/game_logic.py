@@ -3,6 +3,8 @@ from decouple import config
 
 
 
+
+
 def play_game():
     initial_money = int(config("MY_MONEY"))
     money = initial_money
