@@ -22,34 +22,34 @@ class Student(Person):
 
 
 class Teacher(Person):
+    salary = 35000
     def __init__(self, fullname, age, is_married, experience, salary):
         super().__init__(fullname, age, is_married)
         self.experience = experience
         self.salary = salary
 
     def calculate_salary(self):
-        base_salary = self.salary
+        salary = self.salary
         if self.experience > 3:
-            bonus = (self.experience - 3) * 0.05 * base_salary
-            base_salary += bonus
-        return base_salary
+            bonus = (self.experience - 3) * 0.05 * salary
+            salary += bonus
+        return salary
 
 
 def create_students():
-    student1 = Student("John Smith", 16, False, {"Math": 90, "Science": 85, "History": 92})
-    student2 = Student("Alice Johnson", 15, False, {"Math": 95, "Science": 87, "History": 88})
-    student3 = Student("David Williams", 17, False, {"Math": 88, "Science": 91, "History": 90})
+    student1 = Student("Justin Bieber", 16, False, {"Math": 90, "Science": 85, "History": 92})
+    student2 = Student("Selena Gomez", 15, False, {"Math": 95, "Science": 87, "History": 88})
+    student3 = Student("Ariana Grande", 17, False, {"Math": 88, "Science": 91, "History": 90})
 
     students = [student1, student2, student3]
     return students
 
 
-# Создание учителя и распечатка информации о нем
-teacher = Teacher("Mary Thompson", 35, True, 7, 5000)
+teacher = Teacher("Taylor Swift", 35, True, 7, 35000)
 teacher.introduce_myself()
 print("Salary:", teacher.calculate_salary())
 
-# Создание учеников и вывод информации о них
+
 students = create_students()
 for student in students:
     student.introduce_myself()
