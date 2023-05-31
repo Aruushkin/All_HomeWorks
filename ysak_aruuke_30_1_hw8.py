@@ -33,12 +33,12 @@ cursor.execute('''
 ''')
 
 cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Бишкек', 1)")
-cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Париж', 2)")
-cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Берлин', 3)")
+cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Бердин', 2)")
+cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Сеул', 3)")
 cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Пекин', 4)")
-cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Сеул', 5)")
-cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Рим', 6)")
-cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Амстердам', 7)")
+cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Париж', 5)")
+cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Амстердам', 6)")
+cursor.execute("INSERT INTO cities (title, country_id) VALUES ('Рим', 7)")
 
 
 cursor.execute('''
@@ -57,15 +57,15 @@ cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('
 cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Чарли', 'Шин', 4)")
 cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Смит', 'Уилл', 5)")
 cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Бред', 'Питт', 6)")
-cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Жылдыз', 'Адбразакова', 7)")
-cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Джэйми', 'Фокс', 8)")
-cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Тоби', 'Магваер', 9)")
-cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Том', 'Холланд', 10)")
-cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Анджелина', 'Джоли', 11)")
-cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Эмма', 'Вотсан', 12)")
-cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Гарри', 'Поттер', 13)")
-cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Рон', 'Уизли', 14)")
-cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Гермиона', 'Грэйнжер', 15)")
+cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Мэган', 'Фокс', 7)")
+cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Джэйми', 'Фокс', 1)")
+cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Тоби', 'Магваер', 2)")
+cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Том', 'Холланд', 3)")
+cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Анджелина', 'Джоли', 4)")
+cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Эмма', 'Вотсан', 5)")
+cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Гарри', 'Поттер', 6)")
+cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Рон', 'Уизли', 7)")
+cursor.execute("INSERT INTO employees (first_name, last_name, city_id) VALUES ('Гермиона', 'Грэйнжер', 1)")
 
 
 conn.commit()
