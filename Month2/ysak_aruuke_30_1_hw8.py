@@ -1,7 +1,7 @@
 import sqlite3
 
 
-conn = sqlite3.connect('database.db')
+conn = sqlite3.connect('../database.db')
 cursor = conn.cursor()
 
 
@@ -75,7 +75,7 @@ conn.close()
 print("Вы можете отобразить список сотрудников по выбранному id города из перечня городов ниже, для выхода из программы введите 0:")
 
 
-conn = sqlite3.connect('database.db')
+conn = sqlite3.connect('../database.db')
 cursor = conn.cursor()
 cursor.execute("SELECT title FROM cities")
 cities = cursor.fetchall()
@@ -92,7 +92,7 @@ while True:
         break
 
 
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('../database.db')
     cursor = conn.cursor()
     cursor.execute('''
         SELECT employees.first_name, employees.last_name, countries.title, cities.title

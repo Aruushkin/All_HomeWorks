@@ -5,3 +5,4 @@ hw.db
 ENV
 env/
 .venv
+.env

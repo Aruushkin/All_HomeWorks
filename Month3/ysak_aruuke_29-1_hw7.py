@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('hw.db')
+conn = sqlite3.connect('../Month2/hw.db')
 
 cursor = conn.cursor()
 
