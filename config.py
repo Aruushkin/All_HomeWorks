@@ -5,6 +5,6 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 TOKEN = config('TOKEN')
 bot = Bot(TOKEN)
-dp = Dispatcher(bot=bot, storage=storage)
+dp = Dispatcher(bot=bot)
 ADMINs = (975575281,)
 

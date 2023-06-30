@@ -3,6 +3,8 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from config import bot, dp
 
+from handler.parser import serials, mult, anime
+
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message) -> None:
@@ -71,8 +73,29 @@ async def process_number_command(message: types.Message):
         await message.answer("Пожалуйста, введите корректное число и степень.")
 
 
+async def parser_serials(message: types.Message):
+    data = serials.parser()
+    for i in data:
+        await bot.send_message(message.from_user.id,
+                               f"{i['title']}\n\n{i['link']}")
+
+async def parser_multiki(message: types.Message):
+    data = mult.parser()
+    for i in data:
+        await bot.send_message(message.from_user.id,
+                               f"{i['title']}\n\n{i['link']}")
+
+async def parser_anime(message: types.Message):
+    data = anime.parser()
+    for i in data:
+        await bot.send_message(message.from_user.id,
+                               f"{i['title']}\n\n{i['link']}")
+
 def register_handlers_commands(dp: Dispatcher):
     dp.register_message_handler(start_command, commands=['start'])
     dp.register_message_handler(quiz_1, commands=['quiz'])
     dp.register_message_handler(cat_handler, commands=['cat'])
     dp.register_message_handler(process_number_command, commands=['number'])
+    dp.register_message_handler(parser_serials, commands=['serials'])
+    dp.register_message_handler(parser_multiki, commands=['multiki'])
+    dp.register_message_handler(parser_anime, commands=['anime'])
