@@ -84,10 +84,39 @@ async def quiz_4(callback: types.CallbackQuery):
 async def finish(callback: types.CallbackQuery):
     await callback.message.answer('Это все!')
 
+# -------------------------
+
+async def start(message: types.Message):
+    keyboard = InlineKeyboardMarkup()
+    keyboard.add(InlineKeyboardButton('Нажми меня!', callback_data='button_pressed'))
+
+    await message.answer('Привет! Нажми кнопку, чтобы продолжить.', reply_markup=keyboard)
+
+
+async def handle_button_pressed(callback_query: types.CallbackQuery):
+    await callback_query.answer('Кнопка была нажата!')
+    await callback_query.message.answer('Ты нажал кнопку!')
+
+
+async def help(message: types.Message):
+    keyboard = InlineKeyboardMarkup()
+    keyboard.add(InlineKeyboardButton('ПОМОГИ!', callback_data='button_pressed'))
+
+    await message.answer('Это помощь. Чем я могу тебе помочь?', reply_markup=keyboard)
+
+
+async def handle_help_button(callback_query: types.CallbackQuery):
+    await callback_query.answer('Кнопка "ПОМОГИ!" была нажата!')
+    await callback_query.message.answer('Ты нажал кнопку "Помощь"!')
+
 
 def register_handlers_callback(dp: Dispatcher):
     dp.register_callback_query_handler(quiz_2, text='next_button_1')
     dp.register_callback_query_handler(quiz_3, text='next_button_2')
     dp.register_callback_query_handler(quiz_4, text='next_button_3')
     dp.register_callback_query_handler(finish, text='next_button_4')
+    dp.register_message_handler(start, commands=['starttt'])
+    dp.register_callback_query_handler(handle_button_pressed, text='button_pressed')
+    dp.register_message_handler(help, commands=['help'])
+    dp.register_callback_query_handler(handle_help_button, text='help_button')
 
